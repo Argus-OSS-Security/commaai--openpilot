@@ -1,9 +1,10 @@
 name: release
-on:
-  schedule:
-    - cron: '0 9 * * *'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '0 9 * * *'
+#   workflow_dispatch:
+# 
 env:
   GIT_CONFIG_COUNT: 1
   GIT_CONFIG_KEY_0: lfs.fetchexclude

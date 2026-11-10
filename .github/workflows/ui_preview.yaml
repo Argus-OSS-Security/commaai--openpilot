@@ -1,18 +1,19 @@
 name: "ui preview"
-on:
-  push:
-    branches:
-      - master
-  pull_request_target:
-    types: [assigned, opened, synchronize, reopened, edited]
-    branches:
-      - 'master'
-    paths:
-      - 'openpilot/selfdrive/assets/**'
-      - 'openpilot/selfdrive/ui/**'
-      - 'openpilot/system/ui/**'
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches:
+#       - master
+#   pull_request_target:
+#     types: [assigned, opened, synchronize, reopened, edited]
+#     branches:
+#       - 'master'
+#     paths:
+#       - 'openpilot/selfdrive/assets/**'
+#       - 'openpilot/selfdrive/ui/**'
+#       - 'openpilot/system/ui/**'
+#   workflow_dispatch:
+# 
 env:
   UI_JOB_NAME: "Create UI Report"
   REPORT_NAME: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && 'master' || github.event.number }}

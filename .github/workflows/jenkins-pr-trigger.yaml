@@ -1,9 +1,10 @@
 name: jenkins scan
 
-on:
-  issue_comment:
-    types: [created, edited]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   issue_comment:
+#     types: [created, edited]
+# 
 jobs:
   cleanup-branches:
     runs-on: ubuntu-latest

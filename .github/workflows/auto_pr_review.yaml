@@ -1,8 +1,9 @@
 name: "PR review"
-on:
-  pull_request_target:
-    types: [opened, reopened, synchronize, edited]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request_target:
+#     types: [opened, reopened, synchronize, edited]
+# 
 jobs:
   labeler:
     name: review

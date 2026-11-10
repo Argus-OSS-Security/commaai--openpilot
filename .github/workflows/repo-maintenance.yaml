@@ -1,12 +1,13 @@
 name: repo maintenance
 
-on:
-  schedule:
-    - cron: "0 14 * * 1" # every Monday at 2am UTC (6am PST)
-  pull_request:
-    types: [closed]
-  workflow_dispatch:
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: "0 14 * * 1" # every Monday at 2am UTC (6am PST)
+#   pull_request:
+#     types: [closed]
+#   workflow_dispatch:
+# 
 env:
   PYTHONPATH: ${{ github.workspace }}
   GIT_CONFIG_COUNT: 1
